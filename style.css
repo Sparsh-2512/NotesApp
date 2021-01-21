@@ -1,9 +1,22 @@
-*{
-    
-}
 #logo{
     font-family: 'Caveat', cursive;
 }
 body{
-    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Quicksand', sans-serif;
+}
+.card-title{
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.card-text{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.date{
+    font-size: 12px;
+    font-weight: 800;
+}
+.time{
+    font-size: 12px;
+    font-weight: 800;
 }
