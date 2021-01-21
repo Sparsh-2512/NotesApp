@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 #logo{
     font-family: 'Caveat', cursive;
 }
@@ -19,4 +23,14 @@ body{
 .time{
     font-size: 12px;
     font-weight: 800;
+}
+.datentime{
+    background: #ecc3c3;
+    color: rgb(109, 11, 41);
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    width: fit-content;
+    border-radius: 4px;
+    padding: 0px 12px;
 }

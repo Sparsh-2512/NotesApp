@@ -52,8 +52,10 @@ function showNotes() {
     notesObj.forEach((element, index) => {
         html +=
         `<div class="card m-2" style="width: 18rem;">
-        <span class="date">${element.date}</span>
-        <span class="time">${element.time}</span>
+        <span class="datentime">
+            <span class="date">${element.date}</span>
+            <span class="time">${element.time}</span>
+        </span>
         <div class="card-body">
             <h5 class="card-title">${element.noteTitle}</h5>
             <p class="card-text">${element.noteContent}</p>
@@ -102,14 +104,18 @@ function searchNotes() {
             notesObj = JSON.parse(notes);
         }
         let newHtml = "";
-        notesObj.forEach(element => {
+        notesObj.forEach((element,index) => {
             if (element.noteTitle.includes(searchBar.value) || element.noteContent.includes(searchBar.value)) {
                 newHtml +=
-                    `<div class="card m-2" style="width: 18rem;">
+                `<div class="card m-2" style="width: 18rem;">
+                <span class="datentime">
+                    <span class="date">${element.date}</span>
+                    <span class="time">${element.time}</span>
+                </span>
                 <div class="card-body">
                     <h5 class="card-title">${element.noteTitle}</h5>
                     <p class="card-text">${element.noteContent}</p>
-                    <button id="tbd" onclick="deleteNode(this.id)" class="btn btn-danger">Delete</button>
+                    <button id="${index}" onclick="deleteNode(this.id)" class="btn btn-danger">Delete</button>
                 </div>
                 </div>`;
                 let notesContainer = document.getElementById('notesContainer');
